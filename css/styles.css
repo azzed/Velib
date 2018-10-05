@@ -1,0 +1,211 @@
+/***************\
+     GENERAL
+\=============*/
+
+* {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+}
+
+.contenue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/***************\
+    ACCUEIL
+\=============*/
+
+header h1 {
+    border: 2px double #F5F5DC;
+    background-color: #F5F5DC;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+
+/***************\
+     SLIDER
+\=============*/
+
+#caroussel {
+    position: relative;
+    width: 100%;
+}
+
+.caroussel img {
+    position: relative;
+    display: none;
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    border: 1px solid #ddd;
+    background: #FFF;
+}
+
+#carousel .premiere {
+    display: block;
+}
+
+
+/***************\
+      MAP
+       &
+     Canvas
+\=============*/
+
+.map-reserv {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#map {
+    height: 100%;
+}
+
+.map {
+    width: 50%;
+    height: 600px;
+    margin-top: 5%;
+}
+
+.reservation {
+    width: 30%;
+    height: 600px;
+    background-color: #269ba0;
+    margin-top: 90px;
+    border: 1px solid black;
+}
+
+#infosStation {
+    color: white;
+    min-width: 250px;
+    padding: 0px 12px;
+    height: 400px;
+}
+
+#nomStation {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.0em;
+}
+
+#reservation {
+    display: none;
+    width: 100%;
+    font-size: 1.2em;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#infosStation h4 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+/***************\
+    CANVAS
+\=============*/
+
+#interface {
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    max-width: 402px;
+    display: none;
+}
+
+#signature {
+    /* taille du canvas défini dans signature.js */
+    background-color: white;
+    border: 2px solid black;
+    cursor: crosshair;
+}
+
+#mon_canvas {
+    /* taille du canvas dÃ©fini dans signature.js */
+    background-color: white;
+    border: 2px solid black;
+    cursor: crosshair;
+}
+
+#controles {
+    display: inline-flex;
+}
+
+.boutonControle {
+    width: 33%;
+    height: 40px;
+    background-color: dodgerblue;
+}
+
+#valider {
+    color: greenyellow;
+    font-size: 20px;
+    width: 70%;
+}
+
+#effacer {
+    color: orchid;
+    font-size: 20px;
+    width: 70%;
+}
+
+#annuler {
+    color: dimgrey;
+    font-size: 20px;
+    width: 70%;
+}
+
+
+/***************\
+    FOOTER
+\=============*/
+
+#foot {
+    margin: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: firebrick;
+}
+
+
+/***************\
+     MEDIA 
+    QUERIES
+\=============*/
+
+@media screen and (max-width: 1059px) {
+    .map-reserv {
+        display: block;
+        width: 100%;
+    }
+    .map {
+        width: 100%;
+        height: 600px;
+        margin-top: 5%;
+    }
+    .reservation {
+        width: 100%;
+    }
+    .caroussel img {
+   margin: auto;
+}
+}

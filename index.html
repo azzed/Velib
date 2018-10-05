@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Location de vélo sur Paris</title>
+    <meta name="description" content="V-Lo est une application de réservation de vélos parisiens!!! Surfez, choisissez, cliquez et pedalez 🚲">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" href="images/faveicone.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+
+<body>
+     <!-- Page d'accueil -->
+        <header id="accuil">       
+              <h1>BIENVENUE SUR V-LO</h1>
+        </header>
+    <div class="contenue">
+       
+
+        <!--  Caroussel  -->
+        <section class="caroussel">
+            <div id="carousel">
+                <img src="images/deuxieme.jpg" alt="map" class="premiere">
+                <img src="images/troisieme.jpeg" alt="bouton reserver" class="block">
+                <img src="images/quatrieme.jpg" alt="temps de reservation" class="block">
+            </div>
+        </section>
+        <!-- Map avec le canvas pour la signature -->
+        <section class="map-reserv" id="location">
+            <div class="map">
+                <div id="map">
+
+                </div>
+            </div>
+            <!--   Informations sur la station  -->
+            <div class="reservation">
+                <form action="" id="infosStation">
+                    <h4>Détails de la station</h4>
+                    <p id="nomStation"></p>
+                    <p id="statusStation" class="panneau"></p>
+                    <p id="adresseStation" class="panneau"></p>
+                    <p id="emplacementTotal" class="panneau"></p>
+                    <p id="emplacementLibre" class="panneau"></p>
+                    <p id="veloDisponible" class="panneau"></p>
+                    <input id="reservation" class="panneau" type="button" value="Réserver">
+                </form>
+            </div>
+            <!--    Canvas    -->
+            <div id="interface">
+
+                <canvas id="mon_canvas"></canvas>
+                <div id="controles">
+                    <input class="boutonControle" id="valider" type="button" value="valider">
+                    <input class="boutonControle" id="annuler" type="button" value="annuler">
+                    <input class="boutonControle" id="effacer" type="button" value="effacer">
+
+                </div>
+            </div>
+
+
+        </section>
+        <!-- footer   -->
+        <footer id="foot">
+            <p class="aucune">Aucune réservation</p>
+        </footer>
+      
+
+    </div>
+
+    <!-- Les Script   -->
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/CarrousselObject.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvYD3v6pjuR4kUzSwnq-3sHHWD0QuOs44&callback=initMap">
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script src="js/canvas.js"></script>
+    <script src="js/reservation.js"></script>
+    <script src="js/chrono.js"></script>
+    
+    <script src="js/map.js"></script>
+
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
